@@ -71,56 +71,116 @@ window_name = "Detecting age and gender"
 cv2.namedWindow(window_name, cv2.WINDOW_NORMAL)
 cv2.resizeWindow(window_name, 800, 600)
 
+age_to_category = {
+    '(0-2)': 'kid',
+    '(4-6)': 'kid',
+    '(8-12)': 'kid',
+    '(15-20)': 'teen',
+    '(25-32)': 'adult',
+    '(38-43)': 'adult',
+    '(48-53)': 'adult',
+    '(60-100)': 'elder'
+}
+
+# Data statistik
+report_data = {
+    'total': 0,
+    'gender': {'Male': 0, 'Female': 0},
+    'age_category': {'kid': 0, 'teen': 0, 'adult': 0, 'elder': 0}
+}
+
+# Timer laporan
+last_report_time = time.time()
+report_interval = 24*60*60  # dalam detik
+
+last_detection_time = 0
+detection_interval = 5 # dalam detik
+
 while True:
-    # Baca frame
     hasFrame, frame = video.read()
-    
-    # Jika tidak ada frame (akhir video atau error)
+
     if not hasFrame:
         if args.image:
             print("End of video file")
         else:
             print("Error reading from camera")
         break
-    
-    try:
-        # Deteksi wajah
-        resultImg, faceBoxes = highlightFace(faceNet, frame)
-        
-        if not faceBoxes:
-            print("No face detected")
-        else:
-            for faceBox in faceBoxes:
-                # Ekstrak ROI wajah dengan padding
-                face = frame[max(0, faceBox[1]-padding):
-                           min(faceBox[3]+padding, frame.shape[0]-1),
-                           max(0, faceBox[0]-padding):
-                           min(faceBox[2]+padding, frame.shape[1]-1)]
-                
-                # Prediksi gender
-                blob = cv2.dnn.blobFromImage(face, 1.0, (227,227), MODEL_MEAN_VALUES, swapRB=False)
-                genderNet.setInput(blob)
-                genderPreds = genderNet.forward()
-                gender = genderList[genderPreds[0].argmax()]
-                
-                # Prediksi umur
-                ageNet.setInput(blob)
-                agePreds = ageNet.forward()
-                age = ageList[agePreds[0].argmax()]
-                
-                # Tampilkan hasil
-                cv2.putText(resultImg, f'{gender}, {age}', (faceBox[0], faceBox[1]-10), 
-                            cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0,255,255), 2, cv2.LINE_AA)
-        
-        # Tampilkan frame
-        cv2.imshow(window_name, resultImg)
-        
-        # Tekan 'q' untuk keluar
-        if cv2.waitKey(1) & 0xFF == ord('q'):
+
+    current_time = time.time()
+    resultImg = frame.copy()  # default, jika tidak dilakukan deteksi
+
+    # Deteksi hanya setiap 5 detik
+    if current_time - last_detection_time >= detection_interval:
+        last_detection_time = current_time  # update waktu terakhir deteksi
+
+        try:
+            resultImg, faceBoxes = highlightFace(faceNet, frame)
+
+            if not faceBoxes:
+                print("No face detected")
+            else:
+                print(f'{len(faceBoxes)} faces detected')
+                for faceBox in faceBoxes:
+                    face = frame[max(0, faceBox[1]-padding):
+                            min(faceBox[3]+padding, frame.shape[0]-1),
+                            max(0, faceBox[0]-padding):
+                            min(faceBox[2]+padding, frame.shape[1]-1)]
+
+                    blob = cv2.dnn.blobFromImage(face, 1.0, (227,227), MODEL_MEAN_VALUES, swapRB=False)
+
+                    genderNet.setInput(blob)
+                    genderPreds = genderNet.forward()
+                    gender = genderList[genderPreds[0].argmax()]
+
+                    ageNet.setInput(blob)
+                    agePreds = ageNet.forward()
+                    age = ageList[agePreds[0].argmax()]
+                    age_category = age_to_category.get(age, "unknown")
+
+                    print(f"Age range: {age}, Category: {age_category}")
+                    
+                    # Tambah statistik
+                    report_data['total'] += 1
+                    report_data['gender'][gender] += 1
+                    report_data['age_category'][age_category] += 1
+
+
+                    cv2.putText(resultImg, f'{gender}, {age_category}', (faceBox[0], faceBox[1]-10),
+                                cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0,255,255), 2, cv2.LINE_AA)
+   
+        except Exception as e:
+            print(f"Error during processing: {e}")
             break
-            
-    except Exception as e:
-        print(f"Error during processing: {e}")
+        
+        if current_time - last_report_time >= report_interval:
+            last_report_time = current_time
+            timestamp = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(current_time))
+            filename = f"report_{int(current_time)}.txt"
+
+            with open(("Reports/"+filename), 'w') as f:
+                f.write(f"Report Time: {timestamp}\n")
+                f.write(f"Total People Detected: {report_data['total']}\n")
+                f.write(f"Gender Counts:\n")
+                for g, count in report_data['gender'].items():
+                    f.write(f"  {g}: {count}\n")
+                f.write(f"Age Category Counts:\n")
+                for cat, count in report_data['age_category'].items():
+                    f.write(f"  {cat}: {count}\n")
+
+            print(f"Saved report: {filename}")
+
+            # Reset statistik
+            report_data = {
+                'total': 0,
+                'gender': {'Male': 0, 'Female': 0},
+                'age_category': {'kid': 0, 'teen': 0, 'adult': 0, 'elder': 0}
+            }
+
+
+    # Tampilkan frame (baik saat deteksi maupun tidak)
+    cv2.imshow(window_name, resultImg)
+
+    if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
 # Bersihkan
