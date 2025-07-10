@@ -1,0 +1,62 @@
+date,category,total_visitors,total_sales,conversion_rate,insight
+2021-01-06,Industrial & Scientific,1,41,41.0,Produk Wajib
+2021-01-13,Girls' Fashion,0,5,0.0,Normal
+2021-01-13,Industrial & Scientific,2,41,20.5,Produk Wajib
+2021-01-18,Computers,1,45,45.0,Produk Wajib
+2021-01-27,Automotive,2,39,19.5,Produk Wajib
+2021-01-27,Baby,0,62,0.0,Produk Wajib
+2021-01-27,Boys' Fashion,2,5,2.5,Peluang Terlewatkan
+2021-01-27,Health & Household,1,54,54.0,Produk Wajib
+2021-02-14,Women's Fashion,1,30,30.0,Produk Wajib
+2021-02-22,Arts & Crafts,2,43,21.5,Produk Wajib
+2021-02-22,Girls' Fashion,1,10,10.0,Normal
+2021-03-07,Boys' Fashion,0,4,0.0,Normal
+2021-03-14,Home & Kitchen,1,96,96.0,Produk Wajib
+2021-03-18,Arts & Crafts,3,34,11.333333333333334,Normal
+2021-03-20,Home & Kitchen,2,112,56.0,Produk Wajib
+2021-03-22,Industrial & Scientific,4,44,11.0,Normal
+2021-03-30,Arts & Crafts,4,32,8.0,Normal
+2021-03-30,Boys' Fashion,0,2,0.0,Normal
+2021-04-02,Automotive,0,45,0.0,Produk Wajib
+2021-04-08,Women's Fashion,3,24,8.0,Normal
+2021-04-15,Automotive,3,34,11.333333333333334,Normal
+2021-04-20,Women's Fashion,1,37,37.0,Produk Wajib
+2021-05-01,Computers,0,35,0.0,Produk Wajib
+2021-05-06,Boys' Fashion,2,9,4.5,Peluang Terlewatkan
+2021-05-08,Home & Kitchen,1,102,102.0,Produk Wajib
+2021-05-11,Boys' Fashion,0,9,0.0,Normal
+2021-05-11,Girls' Fashion,1,10,10.0,Normal
+2021-05-12,Men's Fashion,2,27,13.5,Produk Wajib
+2021-05-13,Arts & Crafts,2,31,15.5,Produk Wajib
+2021-05-16,Industrial & Scientific,4,39,9.75,Normal
+2021-06-22,Automotive,2,51,25.5,Produk Wajib
+2021-06-24,Boys' Fashion,2,10,5.0,Peluang Terlewatkan
+2021-06-24,Health & Household,0,57,0.0,Produk Wajib
+2021-06-28,Boys' Fashion,2,9,4.5,Peluang Terlewatkan
+2021-07-01,Automotive,1,46,46.0,Produk Wajib
+2021-07-09,Arts & Crafts,3,35,11.666666666666666,Normal
+2021-07-09,Baby,2,79,39.5,Produk Wajib
+2021-07-16,Automotive,3,41,13.666666666666666,Normal
+2021-07-16,Home & Kitchen,0,85,0.0,Produk Wajib
+2021-07-23,Men's Fashion,4,28,7.0,Normal
+2021-07-28,Baby,2,53,26.5,Produk Wajib
+2021-07-28,Girls' Fashion,4,11,2.75,Peluang Terlewatkan
+2021-08-19,Beauty & Personal Care,0,54,0.0,Produk Wajib
+2021-08-19,Boys' Fashion,2,4,2.0,Peluang Terlewatkan
+2021-08-22,Computers,0,44,0.0,Produk Wajib
+2021-08-22,Girls' Fashion,0,9,0.0,Normal
+2021-08-31,Beauty & Personal Care,0,55,0.0,Produk Wajib
+2021-09-04,Luggage,0,9,0.0,Normal
+2021-10-01,Automotive,2,54,27.0,Produk Wajib
+2021-10-01,Health & Household,0,37,0.0,Produk Wajib
+2021-10-05,Beauty & Personal Care,1,63,63.0,Produk Wajib
+2021-10-05,Home & Kitchen,2,96,48.0,Produk Wajib
+2021-10-08,Computers,0,54,0.0,Produk Wajib
+2021-10-13,Luggage,2,1,0.5,Peluang Terlewatkan
+2021-11-09,Arts & Crafts,2,32,16.0,Produk Wajib
+2021-11-24,Women's Fashion,2,24,12.0,Produk Wajib
+2021-11-25,Women's Fashion,1,27,27.0,Produk Wajib
+2021-11-29,Women's Fashion,0,34,0.0,Produk Wajib
+2021-12-03,Electronics,0,95,0.0,Produk Wajib
+2021-12-20,Electronics,2,109,54.5,Produk Wajib
+2021-12-21,Girls' Fashion,1,5,5.0,Normal

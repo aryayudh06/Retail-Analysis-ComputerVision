@@ -1,11 +1,11 @@
 Report Time: 2025-07-10 17:49:10
 Rak: Automotive
-Total People Detected: 2
+Total People Detected: 3
 Gender Counts:
-  Male: 0
-  Female: 2
+  Male: 3
+  Female: 0
 Age Category Counts:
   kid: 0
-  teen: 1
-  adult: 1
+  teen: 0
+  adult: 3
   elder: 0
