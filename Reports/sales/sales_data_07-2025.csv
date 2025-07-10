@@ -1,0 +1,249 @@
+date,item_name,category,units_sold
+2025-07-01,Samsung Smart TV,electronics,3
+2025-07-01,Philips Rice Cooker,electronics,20
+2025-07-01,Fresh Apples,fruits,12
+2025-07-01,Aqua 600ml,drinks,47
+2025-07-01,Indomie Goreng,instant_food,8
+2025-07-01,Dove Shampoo,personal_care,45
+2025-07-01,Sari Roti,bakery,4
+2025-07-01,Ultra Milk,dairy,6
+2025-07-02,Samsung Smart TV,electronics,42
+2025-07-02,Philips Rice Cooker,electronics,44
+2025-07-02,Fresh Apples,fruits,39
+2025-07-02,Aqua 600ml,drinks,47
+2025-07-02,Indomie Goreng,instant_food,35
+2025-07-02,Dove Shampoo,personal_care,48
+2025-07-02,Sari Roti,bakery,10
+2025-07-02,Ultra Milk,dairy,26
+2025-07-03,Samsung Smart TV,electronics,39
+2025-07-03,Philips Rice Cooker,electronics,5
+2025-07-03,Fresh Apples,fruits,10
+2025-07-03,Aqua 600ml,drinks,12
+2025-07-03,Indomie Goreng,instant_food,17
+2025-07-03,Dove Shampoo,personal_care,40
+2025-07-03,Sari Roti,bakery,24
+2025-07-03,Ultra Milk,dairy,14
+2025-07-04,Samsung Smart TV,electronics,11
+2025-07-04,Philips Rice Cooker,electronics,11
+2025-07-04,Fresh Apples,fruits,3
+2025-07-04,Aqua 600ml,drinks,37
+2025-07-04,Indomie Goreng,instant_food,25
+2025-07-04,Dove Shampoo,personal_care,10
+2025-07-04,Sari Roti,bakery,49
+2025-07-04,Ultra Milk,dairy,43
+2025-07-05,Samsung Smart TV,electronics,43
+2025-07-05,Philips Rice Cooker,electronics,1
+2025-07-05,Fresh Apples,fruits,43
+2025-07-05,Aqua 600ml,drinks,5
+2025-07-05,Indomie Goreng,instant_food,22
+2025-07-05,Dove Shampoo,personal_care,17
+2025-07-05,Sari Roti,bakery,50
+2025-07-05,Ultra Milk,dairy,43
+2025-07-06,Samsung Smart TV,electronics,26
+2025-07-06,Philips Rice Cooker,electronics,49
+2025-07-06,Fresh Apples,fruits,25
+2025-07-06,Aqua 600ml,drinks,13
+2025-07-06,Indomie Goreng,instant_food,3
+2025-07-06,Dove Shampoo,personal_care,41
+2025-07-06,Sari Roti,bakery,12
+2025-07-06,Ultra Milk,dairy,44
+2025-07-07,Samsung Smart TV,electronics,18
+2025-07-07,Philips Rice Cooker,electronics,16
+2025-07-07,Fresh Apples,fruits,26
+2025-07-07,Aqua 600ml,drinks,29
+2025-07-07,Indomie Goreng,instant_food,27
+2025-07-07,Dove Shampoo,personal_care,15
+2025-07-07,Sari Roti,bakery,36
+2025-07-07,Ultra Milk,dairy,23
+2025-07-08,Samsung Smart TV,electronics,27
+2025-07-08,Philips Rice Cooker,electronics,19
+2025-07-08,Fresh Apples,fruits,1
+2025-07-08,Aqua 600ml,drinks,23
+2025-07-08,Indomie Goreng,instant_food,21
+2025-07-08,Dove Shampoo,personal_care,27
+2025-07-08,Sari Roti,bakery,11
+2025-07-08,Ultra Milk,dairy,26
+2025-07-09,Samsung Smart TV,electronics,48
+2025-07-09,Philips Rice Cooker,electronics,38
+2025-07-09,Fresh Apples,fruits,12
+2025-07-09,Aqua 600ml,drinks,37
+2025-07-09,Indomie Goreng,instant_food,13
+2025-07-09,Dove Shampoo,personal_care,42
+2025-07-09,Sari Roti,bakery,9
+2025-07-09,Ultra Milk,dairy,44
+2025-07-10,Samsung Smart TV,electronics,38
+2025-07-10,Philips Rice Cooker,electronics,34
+2025-07-10,Fresh Apples,fruits,19
+2025-07-10,Aqua 600ml,drinks,43
+2025-07-10,Indomie Goreng,instant_food,13
+2025-07-10,Dove Shampoo,personal_care,27
+2025-07-10,Sari Roti,bakery,39
+2025-07-10,Ultra Milk,dairy,7
+2025-07-11,Samsung Smart TV,electronics,26
+2025-07-11,Philips Rice Cooker,electronics,8
+2025-07-11,Fresh Apples,fruits,13
+2025-07-11,Aqua 600ml,drinks,22
+2025-07-11,Indomie Goreng,instant_food,4
+2025-07-11,Dove Shampoo,personal_care,35
+2025-07-11,Sari Roti,bakery,41
+2025-07-11,Ultra Milk,dairy,11
+2025-07-12,Samsung Smart TV,electronics,45
+2025-07-12,Philips Rice Cooker,electronics,9
+2025-07-12,Fresh Apples,fruits,3
+2025-07-12,Aqua 600ml,drinks,5
+2025-07-12,Indomie Goreng,instant_food,20
+2025-07-12,Dove Shampoo,personal_care,32
+2025-07-12,Sari Roti,bakery,20
+2025-07-12,Ultra Milk,dairy,37
+2025-07-13,Samsung Smart TV,electronics,15
+2025-07-13,Philips Rice Cooker,electronics,30
+2025-07-13,Fresh Apples,fruits,15
+2025-07-13,Aqua 600ml,drinks,40
+2025-07-13,Indomie Goreng,instant_food,18
+2025-07-13,Dove Shampoo,personal_care,50
+2025-07-13,Sari Roti,bakery,30
+2025-07-13,Ultra Milk,dairy,26
+2025-07-14,Samsung Smart TV,electronics,41
+2025-07-14,Philips Rice Cooker,electronics,24
+2025-07-14,Fresh Apples,fruits,32
+2025-07-14,Aqua 600ml,drinks,30
+2025-07-14,Indomie Goreng,instant_food,19
+2025-07-14,Dove Shampoo,personal_care,14
+2025-07-14,Sari Roti,bakery,37
+2025-07-14,Ultra Milk,dairy,48
+2025-07-15,Samsung Smart TV,electronics,42
+2025-07-15,Philips Rice Cooker,electronics,19
+2025-07-15,Fresh Apples,fruits,14
+2025-07-15,Aqua 600ml,drinks,29
+2025-07-15,Indomie Goreng,instant_food,8
+2025-07-15,Dove Shampoo,personal_care,30
+2025-07-15,Sari Roti,bakery,23
+2025-07-15,Ultra Milk,dairy,36
+2025-07-16,Samsung Smart TV,electronics,3
+2025-07-16,Philips Rice Cooker,electronics,4
+2025-07-16,Fresh Apples,fruits,28
+2025-07-16,Aqua 600ml,drinks,31
+2025-07-16,Indomie Goreng,instant_food,43
+2025-07-16,Dove Shampoo,personal_care,29
+2025-07-16,Sari Roti,bakery,4
+2025-07-16,Ultra Milk,dairy,30
+2025-07-17,Samsung Smart TV,electronics,41
+2025-07-17,Philips Rice Cooker,electronics,24
+2025-07-17,Fresh Apples,fruits,12
+2025-07-17,Aqua 600ml,drinks,42
+2025-07-17,Indomie Goreng,instant_food,35
+2025-07-17,Dove Shampoo,personal_care,18
+2025-07-17,Sari Roti,bakery,37
+2025-07-17,Ultra Milk,dairy,5
+2025-07-18,Samsung Smart TV,electronics,20
+2025-07-18,Philips Rice Cooker,electronics,26
+2025-07-18,Fresh Apples,fruits,3
+2025-07-18,Aqua 600ml,drinks,40
+2025-07-18,Indomie Goreng,instant_food,15
+2025-07-18,Dove Shampoo,personal_care,25
+2025-07-18,Sari Roti,bakery,33
+2025-07-18,Ultra Milk,dairy,35
+2025-07-19,Samsung Smart TV,electronics,30
+2025-07-19,Philips Rice Cooker,electronics,35
+2025-07-19,Fresh Apples,fruits,32
+2025-07-19,Aqua 600ml,drinks,40
+2025-07-19,Indomie Goreng,instant_food,0
+2025-07-19,Dove Shampoo,personal_care,49
+2025-07-19,Sari Roti,bakery,34
+2025-07-19,Ultra Milk,dairy,16
+2025-07-20,Samsung Smart TV,electronics,36
+2025-07-20,Philips Rice Cooker,electronics,33
+2025-07-20,Fresh Apples,fruits,26
+2025-07-20,Aqua 600ml,drinks,19
+2025-07-20,Indomie Goreng,instant_food,33
+2025-07-20,Dove Shampoo,personal_care,36
+2025-07-20,Sari Roti,bakery,24
+2025-07-20,Ultra Milk,dairy,45
+2025-07-21,Samsung Smart TV,electronics,23
+2025-07-21,Philips Rice Cooker,electronics,35
+2025-07-21,Fresh Apples,fruits,32
+2025-07-21,Aqua 600ml,drinks,5
+2025-07-21,Indomie Goreng,instant_food,22
+2025-07-21,Dove Shampoo,personal_care,34
+2025-07-21,Sari Roti,bakery,21
+2025-07-21,Ultra Milk,dairy,7
+2025-07-22,Samsung Smart TV,electronics,46
+2025-07-22,Philips Rice Cooker,electronics,46
+2025-07-22,Fresh Apples,fruits,25
+2025-07-22,Aqua 600ml,drinks,28
+2025-07-22,Indomie Goreng,instant_food,24
+2025-07-22,Dove Shampoo,personal_care,29
+2025-07-22,Sari Roti,bakery,38
+2025-07-22,Ultra Milk,dairy,11
+2025-07-23,Samsung Smart TV,electronics,35
+2025-07-23,Philips Rice Cooker,electronics,25
+2025-07-23,Fresh Apples,fruits,16
+2025-07-23,Aqua 600ml,drinks,39
+2025-07-23,Indomie Goreng,instant_food,30
+2025-07-23,Dove Shampoo,personal_care,33
+2025-07-23,Sari Roti,bakery,47
+2025-07-23,Ultra Milk,dairy,29
+2025-07-24,Samsung Smart TV,electronics,6
+2025-07-24,Philips Rice Cooker,electronics,12
+2025-07-24,Fresh Apples,fruits,32
+2025-07-24,Aqua 600ml,drinks,15
+2025-07-24,Indomie Goreng,instant_food,47
+2025-07-24,Dove Shampoo,personal_care,42
+2025-07-24,Sari Roti,bakery,21
+2025-07-24,Ultra Milk,dairy,4
+2025-07-25,Samsung Smart TV,electronics,45
+2025-07-25,Philips Rice Cooker,electronics,29
+2025-07-25,Fresh Apples,fruits,18
+2025-07-25,Aqua 600ml,drinks,24
+2025-07-25,Indomie Goreng,instant_food,23
+2025-07-25,Dove Shampoo,personal_care,7
+2025-07-25,Sari Roti,bakery,20
+2025-07-25,Ultra Milk,dairy,6
+2025-07-26,Samsung Smart TV,electronics,21
+2025-07-26,Philips Rice Cooker,electronics,39
+2025-07-26,Fresh Apples,fruits,15
+2025-07-26,Aqua 600ml,drinks,5
+2025-07-26,Indomie Goreng,instant_food,26
+2025-07-26,Dove Shampoo,personal_care,1
+2025-07-26,Sari Roti,bakery,36
+2025-07-26,Ultra Milk,dairy,11
+2025-07-27,Samsung Smart TV,electronics,3
+2025-07-27,Philips Rice Cooker,electronics,47
+2025-07-27,Fresh Apples,fruits,22
+2025-07-27,Aqua 600ml,drinks,48
+2025-07-27,Indomie Goreng,instant_food,14
+2025-07-27,Dove Shampoo,personal_care,38
+2025-07-27,Sari Roti,bakery,39
+2025-07-27,Ultra Milk,dairy,47
+2025-07-28,Samsung Smart TV,electronics,47
+2025-07-28,Philips Rice Cooker,electronics,31
+2025-07-28,Fresh Apples,fruits,36
+2025-07-28,Aqua 600ml,drinks,4
+2025-07-28,Indomie Goreng,instant_food,13
+2025-07-28,Dove Shampoo,personal_care,10
+2025-07-28,Sari Roti,bakery,41
+2025-07-28,Ultra Milk,dairy,45
+2025-07-29,Samsung Smart TV,electronics,0
+2025-07-29,Philips Rice Cooker,electronics,24
+2025-07-29,Fresh Apples,fruits,12
+2025-07-29,Aqua 600ml,drinks,19
+2025-07-29,Indomie Goreng,instant_food,23
+2025-07-29,Dove Shampoo,personal_care,1
+2025-07-29,Sari Roti,bakery,13
+2025-07-29,Ultra Milk,dairy,30
+2025-07-30,Samsung Smart TV,electronics,15
+2025-07-30,Philips Rice Cooker,electronics,32
+2025-07-30,Fresh Apples,fruits,25
+2025-07-30,Aqua 600ml,drinks,47
+2025-07-30,Indomie Goreng,instant_food,11
+2025-07-30,Dove Shampoo,personal_care,4
+2025-07-30,Sari Roti,bakery,17
+2025-07-30,Ultra Milk,dairy,26
+2025-07-31,Samsung Smart TV,electronics,16
+2025-07-31,Philips Rice Cooker,electronics,14
+2025-07-31,Fresh Apples,fruits,11
+2025-07-31,Aqua 600ml,drinks,45
+2025-07-31,Indomie Goreng,instant_food,38
+2025-07-31,Dove Shampoo,personal_care,30
+2025-07-31,Sari Roti,bakery,13
+2025-07-31,Ultra Milk,dairy,33

@@ -1,0 +1,11 @@
+Report Time: 2025-07-10 14:30:12
+Rak: food
+Total People Detected: 2
+Gender Counts:
+  Male: 1
+  Female: 1
+Age Category Counts:
+  kid: 0
+  teen: 0
+  adult: 2
+  elder: 0

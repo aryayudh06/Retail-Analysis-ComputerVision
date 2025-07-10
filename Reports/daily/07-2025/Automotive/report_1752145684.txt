@@ -1,0 +1,11 @@
+Report Time: 2025-07-10 18:08:04
+Rak: Automotive
+Total People Detected: 4
+Gender Counts:
+  Male: 2
+  Female: 2
+Age Category Counts:
+  kid: 0
+  teen: 1
+  adult: 2
+  elder: 1

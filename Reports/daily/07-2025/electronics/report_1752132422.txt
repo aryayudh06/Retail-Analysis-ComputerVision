@@ -1,0 +1,11 @@
+Report Time: 2025-07-10 14:27:02
+Rak: electronics
+Total People Detected: 3
+Gender Counts:
+  Male: 3
+  Female: 0
+Age Category Counts:
+  kid: 0
+  teen: 3
+  adult: 0
+  elder: 0

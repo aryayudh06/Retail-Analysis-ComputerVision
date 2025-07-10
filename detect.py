@@ -2,6 +2,7 @@ import cv2
 import math
 import argparse
 import time
+import os 
 
 def highlightFace(net, frame, conf_threshold=0.7):
     frameOpencvDnn = frame.copy()
@@ -23,10 +24,100 @@ def highlightFace(net, frame, conf_threshold=0.7):
             cv2.rectangle(frameOpencvDnn, (x1,y1), (x2,y2), (0,255,0), int(round(frameHeight/150)), 8)
     return frameOpencvDnn, faceBoxes
 
+def dailyReport(report_data, current_time):
+    timestamp = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(current_time))
+    time_folder = time.strftime("%m-%Y", time.localtime(current_time))  # contoh: 07-2025
+
+    # Buat path folder tujuan
+    report_folder = os.path.join("Reports/daily", time_folder, rak_name)
+    os.makedirs(report_folder, exist_ok=True)
+
+    # Nama file report
+    filename = f"report_{int(current_time)}.txt"
+    filepath = os.path.join(report_folder, filename)
+
+    # Simpan laporan
+    with open(filepath, 'w') as f:
+        f.write(f"Report Time: {timestamp}\n")
+        f.write(f"Rak: {rak_name}\n")
+        f.write(f"Total People Detected: {report_data['total']}\n")
+        f.write(f"Gender Counts:\n")
+        for g, count in report_data['gender'].items():
+            f.write(f"  {g}: {count}\n")
+        f.write(f"Age Category Counts:\n")
+        for cat, count in report_data['age_category'].items():
+            f.write(f"  {cat}: {count}\n")
+
+    print(f"Saved report: {filepath}")
+    return
+
+import csv
+
+def monthlyReport():
+    import csv
+
+    time_folder = time.strftime("%m-%Y", time.localtime(current_time))
+    daily_root = os.path.join("Reports/daily", time_folder)
+    monthly_folder = os.path.join("Reports/monthly")
+    os.makedirs(monthly_folder, exist_ok=True)
+    monthly_path = os.path.join(monthly_folder, f"{time_folder}.csv")
+
+    all_reports = []
+
+    # Telusuri setiap rak (subfolder)
+    if not os.path.exists(daily_root):
+        print(f"Tidak ada folder harian: {daily_root}")
+        return
+
+    for rak_folder in os.listdir(daily_root):
+        rak_path = os.path.join(daily_root, rak_folder)
+        if not os.path.isdir(rak_path):
+            continue
+
+        for filename in sorted(os.listdir(rak_path)):
+            if filename.endswith(".txt"):
+                file_path = os.path.join(rak_path, filename)
+                try:
+                    data = parse_txt(file_path)
+                    all_reports.append(data)
+                except Exception as e:
+                    print(f"❌ Gagal parse {file_path}: {e}")
+
+    if all_reports:
+        with open(monthly_path, 'w', newline='') as csvfile:
+            writer = csv.DictWriter(csvfile, fieldnames=[
+                'date', 'rak', 'total', 'Male', 'Female', 'kid', 'teen', 'adult', 'elder'
+            ])
+            writer.writeheader()
+            writer.writerows(all_reports)
+        print(f"✅ Monthly CSV saved: {monthly_path}")
+    else:
+        print("⚠️ Tidak ada data yang valid untuk laporan bulanan.")
+
+
+def parse_txt(filepath):
+    with open(filepath, 'r') as f:
+        lines = f.readlines()
+    return {
+        'date': lines[0].split(": ")[1].split()[0],
+        'rak': lines[1].split(": ")[1].strip(),
+        'total': int(lines[2].split(": ")[1]),
+        'Male': int(lines[4].split(": ")[1]),
+        'Female': int(lines[5].split(": ")[1]),
+        'kid': int(lines[7].split(": ")[1]),
+        'teen': int(lines[8].split(": ")[1]),
+        'adult': int(lines[9].split(": ")[1]),
+        'elder': int(lines[10].split(": ")[1]),
+    }
+
+
 # Inisialisasi parser argumen
 parser = argparse.ArgumentParser()
+parser.add_argument('rak', help='Jenis rak di supermarket (misal: electronics)')
 parser.add_argument('--image', help='Path to image file (leave empty for webcam)')
 args = parser.parse_args()
+
+rak_name = args.rak
 
 # Pastikan model ada
 faceProto = "models/opencv_face_detector.pbtxt"
@@ -154,21 +245,9 @@ while True:
         
         if current_time - last_report_time >= report_interval:
             last_report_time = current_time
-            timestamp = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(current_time))
-            filename = f"report_{int(current_time)}.txt"
-
-            with open(("Reports/"+filename), 'w') as f:
-                f.write(f"Report Time: {timestamp}\n")
-                f.write(f"Total People Detected: {report_data['total']}\n")
-                f.write(f"Gender Counts:\n")
-                for g, count in report_data['gender'].items():
-                    f.write(f"  {g}: {count}\n")
-                f.write(f"Age Category Counts:\n")
-                for cat, count in report_data['age_category'].items():
-                    f.write(f"  {cat}: {count}\n")
-
-            print(f"Saved report: {filename}")
-
+            dailyReport(report_data, current_time)
+            monthlyReport()
+            
             # Reset statistik
             report_data = {
                 'total': 0,
